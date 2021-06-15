@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="GoLang Temel KavramlarİFADELERİN YAZDIRILMASI12345678910111213141516package mainimport &quot;fmt&quot;func main() &amp;#123;	&#x2F;*		%T değişken tipi		%s string		%d integer		%f float		%t boolean		\n Bir Satır">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GoLang 101 [TR]">
+<meta property="og:url" content="https://j0nliv.github.io/2020/09/27/GoLang-101-TR/index.html">
+<meta property="og:site_name" content="Samet Emiroğlu">
+<meta property="og:description" content="GoLang Temel KavramlarİFADELERİN YAZDIRILMASI12345678910111213141516package mainimport &quot;fmt&quot;func main() &amp;#123;	&#x2F;*		%T değişken tipi		%s string		%d integer		%f float		%t boolean		\n Bir Satır">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-09-27T11:57:38.000Z">
+<meta property="article:modified_time" content="2020-10-06T11:11:14.000Z">
+<meta property="article:author" content="Samet Emiroğlu">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/j0nliv-logo.png">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/j0nliv-logo.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/j0nliv-logo.png">
+          
+        
+    
+    <!-- title -->
+    <title>GoLang 101 [TR]</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2021/06/16/Microsoft-SQL-Server-Audit-Sikilastirma-TR-PDF/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2019/10/29/Python-Reverse-Shell-Basic/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://j0nliv.github.io/2020/09/27/GoLang-101-TR/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://j0nliv.github.io/2020/09/27/GoLang-101-TR/&text=GoLang 101 [TR]"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://j0nliv.github.io/2020/09/27/GoLang-101-TR/&title=GoLang 101 [TR]"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://j0nliv.github.io/2020/09/27/GoLang-101-TR/&is_video=false&description=GoLang 101 [TR]"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=GoLang 101 [TR]&body=Check out this article: https://j0nliv.github.io/2020/09/27/GoLang-101-TR/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://j0nliv.github.io/2020/09/27/GoLang-101-TR/&title=GoLang 101 [TR]"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://j0nliv.github.io/2020/09/27/GoLang-101-TR/&title=GoLang 101 [TR]"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://j0nliv.github.io/2020/09/27/GoLang-101-TR/&title=GoLang 101 [TR]"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://j0nliv.github.io/2020/09/27/GoLang-101-TR/&title=GoLang 101 [TR]"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://j0nliv.github.io/2020/09/27/GoLang-101-TR/&name=GoLang 101 [TR]&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#GoLang-Temel-Kavramlar"><span class="toc-number">1.</span> <span class="toc-text">GoLang Temel Kavramlar</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#IFADELERIN-YAZDIRILMASI"><span class="toc-number">1.0.1.</span> <span class="toc-text">İFADELERİN YAZDIRILMASI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GIRDI-INPUT-KAVRAMI"><span class="toc-number">1.0.2.</span> <span class="toc-text">GİRDİ (INPUT) KAVRAMI</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Reader-ile-Girdi-Alma"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">Reader ile Girdi Alma</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Scanln-ile-Girdi-Alma"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">Scanln ile Girdi Alma</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DEGISKENLERIN-KULLANIMI"><span class="toc-number">1.0.3.</span> <span class="toc-text">DEĞİŞKENLERİN KULLANIMI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DIZI-ARRAY-KAVRAMI"><span class="toc-number">1.0.4.</span> <span class="toc-text">DİZİ (ARRAY) KAVRAMI</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Dizilerin-Olusturulmasi-amp-Kullanilmasi"><span class="toc-number">1.0.4.1.</span> <span class="toc-text">Dizilerin Oluşturulması &amp; Kullanılması</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SLICE-amp-MAP-KAVRAMLARI"><span class="toc-number">1.0.5.</span> <span class="toc-text">SLICE &amp; MAP KAVRAMLARI</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Slice"><span class="toc-number">1.0.5.1.</span> <span class="toc-text">Slice</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Map"><span class="toc-number">1.0.5.2.</span> <span class="toc-text">Map</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#KOSUL-IFADELERI"><span class="toc-number">1.0.6.</span> <span class="toc-text">KOŞUL İFADELERİ</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#IF-Statement"><span class="toc-number">1.0.6.1.</span> <span class="toc-text">IF Statement</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Switch-Case"><span class="toc-number">1.0.6.2.</span> <span class="toc-text">Switch Case</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DONGULER"><span class="toc-number">1.0.7.</span> <span class="toc-text">DÖNGÜLER</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#For-Dongusu"><span class="toc-number">1.0.7.1.</span> <span class="toc-text">For Döngüsü</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#For-Dongusunun-Belirli-Aralik-icin-Kullanimi"><span class="toc-number">1.0.7.2.</span> <span class="toc-text">For Döngüsünün Belirli Aralık için Kullanımı</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Kosullu-Donguler"><span class="toc-number">1.0.7.3.</span> <span class="toc-text">Koşullu Döngüler</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FONKSIYON-KAVRAMI"><span class="toc-number">1.0.8.</span> <span class="toc-text">FONKSİYON KAVRAMI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#STRUCT-KAVRAMI"><span class="toc-number">1.0.9.</span> <span class="toc-text">STRUCT KAVRAMI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#INTERFACE-KAVRAMI"><span class="toc-number">1.0.10.</span> <span class="toc-text">INTERFACE KAVRAMI</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        GoLang 101 [TR]
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Samet Emiroğlu</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-09-27T11:57:38.000Z" itemprop="datePublished">2020-09-27</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/GoLang/">GoLang</a> › <a class="category-link" href="/categories/GoLang/101/">101</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="GoLang-Temel-Kavramlar"><a href="#GoLang-Temel-Kavramlar" class="headerlink" title="GoLang Temel Kavramlar"></a>GoLang Temel Kavramlar</h1><h3 id="IFADELERIN-YAZDIRILMASI"><a href="#IFADELERIN-YAZDIRILMASI" class="headerlink" title="İFADELERİN YAZDIRILMASI"></a>İFADELERİN YAZDIRILMASI</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">	/*</span><br><span class="line">		%T değişken tipi</span><br><span class="line">		%s string</span><br><span class="line">		%d integer</span><br><span class="line">		%f float</span><br><span class="line">		%t boolean</span><br><span class="line">		\n Bir Satır Ekle</span><br><span class="line">		\t Bir Tab Ekle</span><br><span class="line">	*/</span><br><span class="line">	fmt.Print(&quot;S.A.\n&quot;)</span><br><span class="line">	fmt.Println(&quot;\t :)&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="GIRDI-INPUT-KAVRAMI"><a href="#GIRDI-INPUT-KAVRAMI" class="headerlink" title="GİRDİ (INPUT) KAVRAMI"></a>GİRDİ (INPUT) KAVRAMI</h3><h4 id="Reader-ile-Girdi-Alma"><a href="#Reader-ile-Girdi-Alma" class="headerlink" title="Reader ile Girdi Alma"></a>Reader ile Girdi Alma</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line">import (</span><br><span class="line">	&quot;bufio&quot;</span><br><span class="line">	&quot;fmt&quot;</span><br><span class="line">	&quot;os&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">	fmt.Print(&quot;Username:&quot;)</span><br><span class="line">	input := bufio.NewReader(os.Stdin)</span><br><span class="line">	name, _ := input.ReadString(&apos;\n&apos;)</span><br><span class="line">	fmt.Println(&quot;:&gt;&quot;, name)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Scanln-ile-Girdi-Alma"><a href="#Scanln-ile-Girdi-Alma" class="headerlink" title="Scanln ile Girdi Alma"></a>Scanln ile Girdi Alma</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">	var name string</span><br><span class="line">	var surname string</span><br><span class="line"></span><br><span class="line">	fmt.Print(&quot;Name Surname: &quot;) //1</span><br><span class="line">	fmt.Scanf(&quot;%s %s&quot;, &amp;name, &amp;surname)</span><br><span class="line">	fmt.Printf(&quot;Name: %s Surname: %s\n&quot;, name, surname) //2</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Girdi, boşlukla ayrılacak bir şekilde ardışık olarak değişkenlere atanır.</li>
+</ul>
+<figure class="highlight plain"><figcaption><span>output</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Name Surname: Samet Emiroğlu</span><br><span class="line">Name: Samet Surname: Emiroğlu</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="DEGISKENLERIN-KULLANIMI"><a href="#DEGISKENLERIN-KULLANIMI" class="headerlink" title="DEĞİŞKENLERİN KULLANIMI"></a>DEĞİŞKENLERİN KULLANIMI</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line">func main() &#123;</span><br><span class="line">	/*</span><br><span class="line">		var name string = &quot;j0nliv&quot; // string varsayılan değer &quot;&quot;</span><br><span class="line">		var x int = 7              // integer varsayılan değeri 0</span><br><span class="line">		var y = 6</span><br><span class="line">		z := 5</span><br><span class="line">		var avg float64 = 23.5 // float varsayılan değer 0</span><br><span class="line">		var accept bool = true // boolean varsayılan değer false</span><br><span class="line">		const cnst = &quot;Const Value&quot; // Sabit</span><br><span class="line">	*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="DIZI-ARRAY-KAVRAMI"><a href="#DIZI-ARRAY-KAVRAMI" class="headerlink" title="DİZİ (ARRAY) KAVRAMI"></a>DİZİ (ARRAY) KAVRAMI</h3><h4 id="Dizilerin-Olusturulmasi-amp-Kullanilmasi"><a href="#Dizilerin-Olusturulmasi-amp-Kullanilmasi" class="headerlink" title="Dizilerin Oluşturulması &amp; Kullanılması"></a>Dizilerin Oluşturulması &amp; Kullanılması</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">	arr := []int&#123;1, 2, 3, 4, 5, 6, 7&#125;</span><br><span class="line">	fmt.Println(arr) //1</span><br><span class="line">	var arr2 = arr[3:7]</span><br><span class="line">	fmt.Println(arr2) //2</span><br><span class="line">	arr2d := [][]int&#123;&#123;1, 2&#125;, &#123;3, 4&#125;, &#123;5, 6&#125;&#125;</span><br><span class="line">	fmt.Println(arr2d) //3</span><br><span class="line">	arr2d := [][]int&#123;&#123;1, 2&#125;, &#123;3, 4&#125;, &#123;5, 6&#125;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><figcaption><span>output</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[1 2 3 4 5 6 7]</span><br><span class="line">[4 5 6 7]</span><br><span class="line">[[1 2] [3 4] [5 6]]</span><br></pre></td></tr></table></figure>
+
+<h3 id="SLICE-amp-MAP-KAVRAMLARI"><a href="#SLICE-amp-MAP-KAVRAMLARI" class="headerlink" title="SLICE &amp; MAP KAVRAMLARI"></a>SLICE &amp; MAP KAVRAMLARI</h3><h4 id="Slice"><a href="#Slice" class="headerlink" title="Slice"></a>Slice</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">	numbers := make([]int, 7)</span><br><span class="line">	numbers[7] = 23</span><br><span class="line">	numbers = append(numbers, 14)</span><br><span class="line">	fmt.Println(numbers) // 1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Çok boyutlu dizi yapısı ve dinamik işlemler için dizilerin sınırladığı alanlarda devreye slice (dilim) girmektedir. </li>
+</ul>
+<figure class="highlight plain"><figcaption><span>output</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[0 0 0 0 0 0 12 14]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Çıktı incelendiğinde, slice’nin dinamik yapısından dolayı, 7 elemanlı olacak şekilde oluşturulan diziye 8. elemanın eklenebildiği görülüyor.</li>
+</ul>
+<h4 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">	var colors map[string]string</span><br><span class="line">	colors = make(map[string]string)</span><br><span class="line">	colors[&quot;black&quot;] = &quot;#000000&quot;</span><br><span class="line">	colors[&quot;white&quot;] = &quot;#FFFFFF&quot;</span><br><span class="line">	fmt.Println(colors) // 1</span><br><span class="line"></span><br><span class="line">	hexes := map[string]string&#123;</span><br><span class="line">		&quot;#000000&quot;: &quot;black&quot;,</span><br><span class="line">		&quot;#FFFFFF&quot;: &quot;white&quot;,</span><br><span class="line">	&#125;</span><br><span class="line">	for key, value := range hexes &#123;</span><br><span class="line">		fmt.Println(key, value) // 2 - 3</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Slice’den farklı olarak anahtar-değer yapısı mevcuttur.</li>
+</ul>
+<figure class="highlight plain"><figcaption><span>output</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">map[black:#000000 white:#FFFFFF]</span><br><span class="line">#000000 black</span><br><span class="line">#FFFFFF white</span><br></pre></td></tr></table></figure>
+
+<h3 id="KOSUL-IFADELERI"><a href="#KOSUL-IFADELERI" class="headerlink" title="KOŞUL İFADELERİ"></a>KOŞUL İFADELERİ</h3><h4 id="IF-Statement"><a href="#IF-Statement" class="headerlink" title="IF Statement"></a>IF Statement</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">	var username string</span><br><span class="line">	fmt.Print(&quot;Username:&quot;)</span><br><span class="line">	fmt.Scanln(&amp;username)</span><br><span class="line"></span><br><span class="line">	if username == &quot;j0nl1v&quot; &#123;</span><br><span class="line">		fmt.Println(&quot;Username is valid!&quot;)</span><br><span class="line">	&#125; else if username == &quot;sametemirogl&quot; &#123;</span><br><span class="line">		fmt.Println(&quot;Username is old!&quot;)</span><br><span class="line">	&#125; else &#123;</span><br><span class="line">		fmt.Println(&quot;Username is unvalid!&quot;)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Switch-Case"><a href="#Switch-Case" class="headerlink" title="Switch Case"></a>Switch Case</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">	var password string</span><br><span class="line">	fmt.Print(&quot;Password:&quot;)</span><br><span class="line">	fmt.Scanln(&amp;password)</span><br><span class="line">s</span><br><span class="line">	switch password &#123;</span><br><span class="line">	case &quot;12345&quot;:</span><br><span class="line">		fmt.Println(&quot;Password is valid!&quot;)</span><br><span class="line">	case &quot;34567&quot;:</span><br><span class="line">		fmt.Println(&quot;Password is old!&quot;)</span><br><span class="line">	default:</span><br><span class="line">		fmt.Println(&quot;Password is unvalid!&quot;)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="DONGULER"><a href="#DONGULER" class="headerlink" title="DÖNGÜLER"></a>DÖNGÜLER</h3><h4 id="For-Dongusu"><a href="#For-Dongusu" class="headerlink" title="For Döngüsü"></a>For Döngüsü</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">	for i := 0; i &lt; 8; &#123;</span><br><span class="line">		i += 2</span><br><span class="line">		fmt.Println(i)</span><br><span class="line">	&#125;</span><br><span class="line">	for j := 1; j &lt; 5; j++ &#123;</span><br><span class="line">		fmt.Print(&quot;*&quot;)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="For-Dongusunun-Belirli-Aralik-icin-Kullanimi"><a href="#For-Dongusunun-Belirli-Aralik-icin-Kullanimi" class="headerlink" title="For Döngüsünün Belirli Aralık için Kullanımı"></a>For Döngüsünün Belirli Aralık için Kullanımı</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">	hexes := map[string]string&#123;</span><br><span class="line">		&quot;#000000&quot;: &quot;black&quot;,</span><br><span class="line">		&quot;#FFFFFF&quot;: &quot;white&quot;,</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	for key, value := range hexes &#123;</span><br><span class="line">		fmt.Println(key, value)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Kosullu-Donguler"><a href="#Kosullu-Donguler" class="headerlink" title="Koşullu Döngüler"></a>Koşullu Döngüler</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">	var x int</span><br><span class="line">	for x &lt; 3 &#123;</span><br><span class="line">		fmt.Println(x)</span><br><span class="line">		x++</span><br><span class="line">	&#125;</span><br><span class="line">	var y int</span><br><span class="line">	for &#123;</span><br><span class="line">		fmt.Println(y)</span><br><span class="line">		if y &gt;= 3 &#123;</span><br><span class="line">			break</span><br><span class="line">		&#125;</span><br><span class="line">		y++</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Örnek kod bloğunda yapı olarak farklı bir kullanım mevcuttur fakat döngüler mantık olarak aynı işlevi görmektedir. (x ve y değerleri “&lt; 3” olduğu sürece işlem sürecektir.)</li>
+</ul>
+<h3 id="FONKSIYON-KAVRAMI"><a href="#FONKSIYON-KAVRAMI" class="headerlink" title="FONKSİYON KAVRAMI"></a>FONKSİYON KAVRAMI</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func print(text string) string &#123;</span><br><span class="line">	return text</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func calc(x int, y int) int &#123;</span><br><span class="line">	return x * y</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func info(now int, date int, name string, surname string) (int, string) &#123;</span><br><span class="line">	return (date - now) * -1, name + &quot; &quot; + surname</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">	fmt.Println(print(&quot;S.A&quot;))</span><br><span class="line">	fmt.Println(calc(3, 2))</span><br><span class="line">	fmt.Println(info(2020, 1997, &quot;Samet&quot;, &quot;Emiroğlu&quot;))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Fonksiyonlar yapı olarak aşağıdaki gibi tanımlanmaktadır.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">func fonksiyon_adi(degisken_adı degişken_tipi) &#123;</span><br><span class="line">	// Kod bloğu</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Herhangi bir değeri return ediyorsa yapı aşağıdaki gibi olmaktadır.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">func fonksiyon_adi(degisken_adı degişken_tipi) donus_tipi &#123;</span><br><span class="line">	return degisken_adi</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Birden fazla değer return edilecekse eğer yapı aşağıdaki gibi olmaktadır.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">func fonksiyon_adi(degisken_adı degişken_tipi) (donus_tipi,donus_tipi2) &#123;</span><br><span class="line">	return (degisken_adi,&quot;Değer 2&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="STRUCT-KAVRAMI"><a href="#STRUCT-KAVRAMI" class="headerlink" title="STRUCT KAVRAMI"></a>STRUCT KAVRAMI</h3><ul>
+<li>Struct ile bellek içerisinde aynı tipte veri grubu oluşturulmaktadır. Oluşturulan bu değişkenlere bellek üzerinde tek bir adres ve pointer atanmaktadır.</li>
+</ul>
+<figure class="highlight plain"><figcaption><span>Struct Oluşturma</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">type car struct &#123;</span><br><span class="line">	model string</span><br><span class="line">	brand int</span><br><span class="line">	hp    int</span><br><span class="line">	year  int</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Struct oluşturma, örnekte olduğu gibi gerçekleşmektedir.</li>
+<li>Oluşturulan Struct yapısı farklı bir Struct grubu ile extend edilebildiği gibi çeşitli fonksiyonlar da eklenebilmektedir.</li>
+</ul>
+<figure class="highlight plain"><figcaption><span>Struct Genişletme</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">type car struct &#123;</span><br><span class="line">	// Elemanlar</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">type suv struct &#123;</span><br><span class="line">	car </span><br><span class="line">	yeniEleman string</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Struct içerisindeki elemanlar yeni veri grubu ile extend edilmek istendiğinde, oluşturulan yeni Struct içerisinde eklenmesi istenen Struct’ın adı belirtilmelidir.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">func (calc car) oldCalculator() int &#123;</span><br><span class="line">	return (time.Now().Year() - calc.year)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Struct için fonksiyon özelliği eklenmek istediğinde, ilgili Struct, oluşturulan fonksiyona parametre olarak verilmelidir.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line">import (</span><br><span class="line">	&quot;fmt&quot;</span><br><span class="line">	&quot;time&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">type car struct &#123;</span><br><span class="line">	model string</span><br><span class="line">	brand int</span><br><span class="line">	hp    int</span><br><span class="line">	year  int</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func (calc car) oldCalculator() int &#123;</span><br><span class="line">	return (time.Now().Year() - calc.year)</span><br><span class="line">&#125;</span><br><span class="line">type suv struct &#123;</span><br><span class="line">	car</span><br><span class="line">	fuel string</span><br><span class="line">&#125;</span><br><span class="line">func main() &#123;</span><br><span class="line">	mercy := car&#123;model: &quot;e200&quot;, brand: 100000, hp: 200, year: 2002&#125;</span><br><span class="line">	fmt.Println(&quot;Model: &quot;, mercy.model, &quot; Brand: &quot;, mercy.brand, &quot; Horse Power: &quot;, mercy.hp, &quot; Old:&quot;, mercy.oldCalculator()) // 1</span><br><span class="line">	merso := suv&#123;car&#123;&quot;GLC350&quot;, 1000000, 320, 2019&#125;, &quot;hybrid&quot;&#125;</span><br><span class="line">	fmt.Println(&quot;Model: &quot;, merso.model, &quot; Brand: &quot;, merso.brand, &quot; Horse Power: &quot;, merso.hp, &quot; Old:&quot;, merso.oldCalculator(), &quot; Fuelt Type: &quot;, merso.fuel) // 2</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Struct’ın oluşturulması, extend edilmesi, fonksiyon eklenmesi ve kullanılmasına dair basit bir örnek.</li>
+</ul>
+<figure class="highlight plain"><figcaption><span>output</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Model:  e200  Brand:  100000  Horse Power:  200  Old: 18</span><br><span class="line">Model:  GLC350  Brand:  1000000  Horse Power:  320  Old: 1  Fuelt Type:  hybrid</span><br></pre></td></tr></table></figure>
+
+<h3 id="INTERFACE-KAVRAMI"><a href="#INTERFACE-KAVRAMI" class="headerlink" title="INTERFACE KAVRAMI"></a>INTERFACE KAVRAMI</h3><figure class="highlight plain"><figcaption><span>interface.go</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">type calculate interface &#123;</span><br><span class="line">	area() float64</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">type square struct &#123;</span><br><span class="line">	long  float64</span><br><span class="line">	short float64</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">type circle struct &#123;</span><br><span class="line">	r float64</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func (s square) area() float64 &#123;</span><br><span class="line">	return s.short * s.long</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func (d circle) area() float64 &#123;</span><br><span class="line">	return 3.14 * (d.r * d.r)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func areaCalc(i calculate) &#123;</span><br><span class="line">	fmt.Println(i.area())</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">	var myInterface calculate</span><br><span class="line">	var myInterface2 calculate</span><br><span class="line">	circleAreaCalc := circle&#123;7&#125;</span><br><span class="line">	squareAreaCalc := square&#123;3, 2&#125;</span><br><span class="line">	myInterface = &amp;circleAreaCalc</span><br><span class="line">	myInterface2 = &amp;squareAreaCalc</span><br><span class="line">	areaCalc(myInterface)</span><br><span class="line">	areaCalc(myInterface2)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Interfaceler mantık olarak class yapısına benzer fakat static değişkenlere sahiptir. Bu static değişkenler kullanılarak tanımlanan metodlar gerçekleştirilmektedir.</li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#GoLang-Temel-Kavramlar"><span class="toc-number">1.</span> <span class="toc-text">GoLang Temel Kavramlar</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#IFADELERIN-YAZDIRILMASI"><span class="toc-number">1.0.1.</span> <span class="toc-text">İFADELERİN YAZDIRILMASI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GIRDI-INPUT-KAVRAMI"><span class="toc-number">1.0.2.</span> <span class="toc-text">GİRDİ (INPUT) KAVRAMI</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Reader-ile-Girdi-Alma"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">Reader ile Girdi Alma</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Scanln-ile-Girdi-Alma"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">Scanln ile Girdi Alma</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DEGISKENLERIN-KULLANIMI"><span class="toc-number">1.0.3.</span> <span class="toc-text">DEĞİŞKENLERİN KULLANIMI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DIZI-ARRAY-KAVRAMI"><span class="toc-number">1.0.4.</span> <span class="toc-text">DİZİ (ARRAY) KAVRAMI</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Dizilerin-Olusturulmasi-amp-Kullanilmasi"><span class="toc-number">1.0.4.1.</span> <span class="toc-text">Dizilerin Oluşturulması &amp; Kullanılması</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SLICE-amp-MAP-KAVRAMLARI"><span class="toc-number">1.0.5.</span> <span class="toc-text">SLICE &amp; MAP KAVRAMLARI</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Slice"><span class="toc-number">1.0.5.1.</span> <span class="toc-text">Slice</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Map"><span class="toc-number">1.0.5.2.</span> <span class="toc-text">Map</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#KOSUL-IFADELERI"><span class="toc-number">1.0.6.</span> <span class="toc-text">KOŞUL İFADELERİ</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#IF-Statement"><span class="toc-number">1.0.6.1.</span> <span class="toc-text">IF Statement</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Switch-Case"><span class="toc-number">1.0.6.2.</span> <span class="toc-text">Switch Case</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DONGULER"><span class="toc-number">1.0.7.</span> <span class="toc-text">DÖNGÜLER</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#For-Dongusu"><span class="toc-number">1.0.7.1.</span> <span class="toc-text">For Döngüsü</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#For-Dongusunun-Belirli-Aralik-icin-Kullanimi"><span class="toc-number">1.0.7.2.</span> <span class="toc-text">For Döngüsünün Belirli Aralık için Kullanımı</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Kosullu-Donguler"><span class="toc-number">1.0.7.3.</span> <span class="toc-text">Koşullu Döngüler</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FONKSIYON-KAVRAMI"><span class="toc-number">1.0.8.</span> <span class="toc-text">FONKSİYON KAVRAMI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#STRUCT-KAVRAMI"><span class="toc-number">1.0.9.</span> <span class="toc-text">STRUCT KAVRAMI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#INTERFACE-KAVRAMI"><span class="toc-number">1.0.10.</span> <span class="toc-text">INTERFACE KAVRAMI</span></a></li></ol></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://j0nliv.github.io/2020/09/27/GoLang-101-TR/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://j0nliv.github.io/2020/09/27/GoLang-101-TR/&text=GoLang 101 [TR]"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://j0nliv.github.io/2020/09/27/GoLang-101-TR/&title=GoLang 101 [TR]"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://j0nliv.github.io/2020/09/27/GoLang-101-TR/&is_video=false&description=GoLang 101 [TR]"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=GoLang 101 [TR]&body=Check out this article: https://j0nliv.github.io/2020/09/27/GoLang-101-TR/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://j0nliv.github.io/2020/09/27/GoLang-101-TR/&title=GoLang 101 [TR]"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://j0nliv.github.io/2020/09/27/GoLang-101-TR/&title=GoLang 101 [TR]"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://j0nliv.github.io/2020/09/27/GoLang-101-TR/&title=GoLang 101 [TR]"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://j0nliv.github.io/2020/09/27/GoLang-101-TR/&title=GoLang 101 [TR]"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://j0nliv.github.io/2020/09/27/GoLang-101-TR/&name=GoLang 101 [TR]&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2021 Samet Emiroğlu
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight .code pre").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      target: function(trigger) {
+        return trigger.nextElementSibling;
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Yess! Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
