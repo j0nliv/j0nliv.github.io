@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="TEMEL JMETER KULLANIMIApache Jmeter Nedir? Apache JMETER, java programlama dili ile geliştirilmiş, çeşitli web uygulama hizmetlerinin performansını analiz etmek, ölçmek ve yük testi gerçekleştirmek iç">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Preparation to Basic Load Test Scenerios With Jmeter [TR]">
+<meta property="og:url" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/index.html">
+<meta property="og:site_name" content="Samet Emiroğlu">
+<meta property="og:description" content="TEMEL JMETER KULLANIMIApache Jmeter Nedir? Apache JMETER, java programlama dili ile geliştirilmiş, çeşitli web uygulama hizmetlerinin performansını analiz etmek, ölçmek ve yük testi gerçekleştirmek iç">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/thread_group.png">
+<meta property="og:image" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/http_request.png">
+<meta property="og:image" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/cookies_manager.png">
+<meta property="og:image" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/simple.png">
+<meta property="og:image" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/login_get_request.png">
+<meta property="og:image" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/form.png">
+<meta property="og:image" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/burp.png">
+<meta property="og:image" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/login_post_request.png">
+<meta property="og:image" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/admin_get_request.png">
+<meta property="og:image" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/results.png">
+<meta property="og:image" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/result_control.png">
+<meta property="og:image" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/graph_results.png">
+<meta property="og:image" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/thread_group.png">
+<meta property="og:image" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/recording.png">
+<meta property="og:image" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/recording-2.png">
+<meta property="og:image" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/recorder.png">
+<meta property="og:image" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/proxy_info.png">
+<meta property="og:image" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/certificate.png">
+<meta property="og:image" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/first_record.png">
+<meta property="og:image" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/login_screen.png">
+<meta property="og:image" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/products_detail.png">
+<meta property="og:image" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/comments.png">
+<meta property="og:image" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/record_graph_results.png">
+<meta property="og:image" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/comment_final.png">
+<meta property="article:published_time" content="2021-08-14T19:21:33.000Z">
+<meta property="article:modified_time" content="2021-08-15T11:24:46.806Z">
+<meta property="article:author" content="Samet Emiroğlu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/thread_group.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/j0nliv-logo.png">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/j0nliv-logo.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/j0nliv-logo.png">
+          
+        
+    
+    <!-- title -->
+    <title>Preparation to Basic Load Test Scenerios With Jmeter [TR]</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2021/08/04/IPTables-Rules/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/&text=Preparation to Basic Load Test Scenerios With Jmeter [TR]"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/&title=Preparation to Basic Load Test Scenerios With Jmeter [TR]"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/&is_video=false&description=Preparation to Basic Load Test Scenerios With Jmeter [TR]"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Preparation to Basic Load Test Scenerios With Jmeter [TR]&body=Check out this article: https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/&title=Preparation to Basic Load Test Scenerios With Jmeter [TR]"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/&title=Preparation to Basic Load Test Scenerios With Jmeter [TR]"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/&title=Preparation to Basic Load Test Scenerios With Jmeter [TR]"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/&title=Preparation to Basic Load Test Scenerios With Jmeter [TR]"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/&name=Preparation to Basic Load Test Scenerios With Jmeter [TR]&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#TEMEL-JMETER-KULLANIMI"><span class="toc-number">1.</span> <span class="toc-text">TEMEL JMETER KULLANIMI</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Apache-Jmeter-Nedir"><span class="toc-number">1.1.</span> <span class="toc-text">Apache Jmeter Nedir?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JMeter-ile-Web-Uygulama-Giris-Yap-Fonksiyonu-Test-Senaryosunun-Olusturulmasi"><span class="toc-number">1.2.</span> <span class="toc-text">JMeter ile Web Uygulama Giriş Yap Fonksiyonu Test Senaryosunun Oluşturulması</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JMETER-RECORDING-KULLANARAK-ISTEKLERIN-PROXY-UZERINDEN-YAKALANMASI"><span class="toc-number">1.3.</span> <span class="toc-text">JMETER RECORDING KULLANARAK İSTEKLERİN PROXY ÜZERİNDEN YAKALANMASI</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Preparation to Basic Load Test Scenerios With Jmeter [TR]
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Samet Emiroğlu</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2021-08-14T19:21:33.000Z" itemprop="datePublished">2021-08-14</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/Web-Application/">Web Application</a> › <a class="category-link" href="/categories/Web-Application/Load-Test/">Load Test</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="TEMEL-JMETER-KULLANIMI"><a href="#TEMEL-JMETER-KULLANIMI" class="headerlink" title="TEMEL JMETER KULLANIMI"></a>TEMEL JMETER KULLANIMI</h1><h2 id="Apache-Jmeter-Nedir"><a href="#Apache-Jmeter-Nedir" class="headerlink" title="Apache Jmeter Nedir?"></a>Apache Jmeter Nedir?</h2><ul>
+<li>Apache <a target="_blank" rel="noopener" href="https://jmeter.apache.org/">JMETER</a>, java programlama dili ile geliştirilmiş, çeşitli web uygulama hizmetlerinin performansını analiz etmek, ölçmek ve yük testi gerçekleştirmek için kullanılan ücretsiz bir yazılımdır.</li>
+</ul>
+<h2 id="JMeter-ile-Web-Uygulama-Giris-Yap-Fonksiyonu-Test-Senaryosunun-Olusturulmasi"><a href="#JMeter-ile-Web-Uygulama-Giris-Yap-Fonksiyonu-Test-Senaryosunun-Olusturulmasi" class="headerlink" title="JMeter ile Web Uygulama Giriş Yap Fonksiyonu Test Senaryosunun Oluşturulması"></a>JMeter ile Web Uygulama Giriş Yap Fonksiyonu Test Senaryosunun Oluşturulması</h2><ul>
+<li><p>Başlangıçta yeni bir test planı oluşturulur.</p>
+</li>
+<li><p>Test planına sağ tık yapılarak &gt; Add &gt; Threads bağlantısı eklenerek kullanıcı similasyonu tanımlamaları gerçekleştirilmektedir.</p>
+</li>
+</ul>
+<img src="/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/thread_group.png" class="">
+
+<ul>
+<li>Yapılan Tanımlamalar;<ul>
+<li>Number of Threads(users): İstek atacak toplam kullanıcı sayısı. (20 kullanıya ulaşmasını istediğimizi belirttik.)</li>
+<li>Ramp-up Period: Tanımlanan kullanıcı sayısına kaç saniyede ulaşılacağı belirtilmektedir. (5 saniyede ulaşılmasını istediğini belirttik.)</li>
+<li>Number of Threads / Ramp-up Period = Saniyede istek atacak kullanıcı sayısı ( 20 / 5 = 4 Kullanıcı )</li>
+<li>Loop Count: Senaryonun belirtilen tanımlamalar kullanılarak kaç defa gerçekleştirileceği belirtilmektedir. (Forever seçeneği, durdurulana kadar devam etmesini sağlamaktadır.)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Thread Group bağlantısına sağ tık yapılarak &gt; Add &gt; Config Element &gt; HTTP Request Defaults bağlantısından ekleme yapılarak,testin gerçekleştirildiği web uygulamasının tanımlamaları yapılmaktadır.</li>
+</ul>
+<img src="/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/http_request.png" class="">
+
+<ul>
+<li><p>Testin yapılacağı web uygulamasına gönderilecek isteklerin gerçekleştirileceği protokol, testin gerçekleştirildiği web uygulamasının IP/Domain adresi ve iletişim kuracağı port tanımlanır.</p>
+</li>
+<li><p>Thread Group bağlantısına sağ tık yapılarak &gt; Add &gt; Config Element &gt; HTTP Cookies Manager bağlantısından eklenmektedir, Cookie Manager ile testin gerçekleştirileceği web uygulamasının cookie politikası belirlenir ve tercihe göre cookie tanımlaması gerçekleştirilir.</p>
+</li>
+</ul>
+<img src="/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/cookies_manager.png" class="">
+
+<ul>
+<li><p>Bu senaryoda herhangi bir ekstra cookie tanımlaması yapılmayacağından dolayı cookie politikasını varsayılan gelen standart olarak bırakılmıştır. </p>
+</li>
+<li><p>Thread Group bağlantısına sağ tık yapılarak &gt; Add &gt; Logic Controller &gt; Simple Controller bağlantısından ekleme yapılarak, giriş işleminin testi için gerçekleştirilecek post işlemlerinin, iletişim kuracağı controllerların tanımlamalarını oluşturmak için Controller eklenmektedir.</p>
+</li>
+</ul>
+<img src="/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/simple.png" class="">
+
+<ul>
+<li>Oluşturulan Simple Controller’a sağ tık yapılarak &gt; Add &gt; Sampler &gt; HTTP Request ile test edilecek giriş sayfasının GET isteğinin tanımlanması için eklenmektedir. </li>
+</ul>
+<img src="/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/login_get_request.png" class="">
+
+<ul>
+<li><p>Protocol, IP/Domain ve Port tanımlamalarına ek olarak yapılan tanımlamalar;</p>
+<ul>
+<li>İstek gönderilirken hangi metodun kullanılacağı method alanından belirtilmektedir.</li>
+<li>Testin gerçekleştirileceği login sayfasının bağlantı yolu path alanına eklenmektedir.</li>
+</ul>
+</li>
+<li><p>Http Request ekleme işleminin aynısı POST Requestini tanımlamak için de yapılmıştır.</p>
+</li>
+</ul>
+<img src="/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/form.png" class="">
+
+<img src="/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/burp.png" class="">
+
+<ul>
+<li>POST işlemini gerçekleştirmek için kullanılan parametreler, giriş sayfasının gönderdiği POST isteği Burp Suite aracı ile kontrol edilerek elde edilmiştir. </li>
+</ul>
+<img src="/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/login_post_request.png" class="">
+
+<ul>
+<li>GET isteğinde yapılan tanımlamalara ek olarak bazı değişiklikler yapılması gerekmektedir;<ul>
+<li>Method POST olarak seçilir.</li>
+<li>Giriş formuyla beraber gönderilecek parametreler tanımlanır.</li>
+</ul>
+</li>
+</ul>
+<img src="/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/admin_get_request.png" class="">
+
+<ul>
+<li><p>Kullanıcı giriş işleminin başarı durumunun kontrolü, yalnızca giriş yapmış yetkili bir kullanıcının erişim sağlayabildiği admin paneline, yapılan GET isteği ile gerçekleştirilmiştir. </p>
+</li>
+<li><p>Test sonuçlarını gözlemlemek üzere Test planına sağ tık yaparak &gt; Add &gt; Listener &gt; View Result Tree eklenir.</p>
+</li>
+</ul>
+<img src="/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/results.png" class="">
+
+<ul>
+<li>Testin başlatılmasının ardından, View Result Tree üzerinden sonuçlar gözlemlenebilmektedir.</li>
+</ul>
+<img src="/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/result_control.png" class="">
+
+<ul>
+<li><p>Yukarıdaki ekran görüntüsünde görüldüğü gibi giriş işlemi başarılı bir şekilde gerçekleştirilmiştir. </p>
+</li>
+<li><p>Admin paneline gerçekleştirilen GET isteğine dönen yanıt kontrol edildiğinde giriş yapmış kullanıcı adı karşılama mesajında görülmektedir. </p>
+</li>
+<li><p>Daha iyi bir gözlem için test planına sağ tık yapılarak &gt; Add &gt; Listener &gt; Graph Results bağlantısından Graph Results eklenerek sonuçlar grafik üzerinden de incelenebilmektedir.</p>
+</li>
+</ul>
+<img src="/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/graph_results.png" class="">
+
+<ul>
+<li>Grafiğin daha net anlaşılması için istek atacak kullanıcı sayısı 100 olarak değiştirilmiştir.</li>
+</ul>
+<h2 id="JMETER-RECORDING-KULLANARAK-ISTEKLERIN-PROXY-UZERINDEN-YAKALANMASI"><a href="#JMETER-RECORDING-KULLANARAK-ISTEKLERIN-PROXY-UZERINDEN-YAKALANMASI" class="headerlink" title="JMETER RECORDING KULLANARAK İSTEKLERİN PROXY ÜZERİNDEN YAKALANMASI"></a>JMETER RECORDING KULLANARAK İSTEKLERİN PROXY ÜZERİNDEN YAKALANMASI</h2><ul>
+<li>Jmeter’in sağladığı kolaylıklardan biri olan Recording ile tarayıcı üzerinden proxy tanımlanarak, senaryo adımlarına ait ilgili istekler basit bir şekilde oluşturulabilmektedir.</li>
+</ul>
+<img src="/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/thread_group.png" class="">
+<img src="/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/recording.png" class="">
+
+<ul>
+<li>Jmeter ile beraber hazır olarak gelen Recording Template’i kullanılarak senaryo oluşturulur. (Boş bir senaryo template’i oluşturularak ilgili recording componentleri eklenerek de oluşturulabilmektedir.)</li>
+</ul>
+<img src="/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/recording-2.png" class="">
+
+<ul>
+<li>İsteklerin gönderileceği sunucu adresini ya da domain name’ini, kaydedilecek output adını ve kullanılacak metod yazılarak proje oluşturulur.</li>
+</ul>
+<img src="/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/recorder.png" class="">
+
+<ul>
+<li>Senaryo kaydını başlatmadan önce sayfanın gezileceği tarayıcı üzerinden proxy tanımlamalarının yapılması gerekmektedir. </li>
+</ul>
+<img src="/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/proxy_info.png" class="">
+
+<ul>
+<li>Tarayıcıda ayarlanacak proxy bilgileri yukarıdaki görüntüdeki gibi olmalıdır.</li>
+</ul>
+<img src="/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/certificate.png" class="">
+
+<ul>
+<li><p>Start ile kayıt başlatıldığında yukarıdaki görüntüdeki bilgi mesajı verilmektedir.</p>
+</li>
+<li><p>apache_jmeter &gt; bin &gt; ApacheJMeterTemporaryRootCA.crt sertifika dosyasını tarayıcımıza yükleyerek kaydın başarılı bir şekilde gerçekleşmesini sağlıyoruz.</p>
+</li>
+</ul>
+<img src="/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/first_record.png" class="">
+
+<ul>
+<li>Atacağımız her kayıt isteğinde bu şekilde isimlendirmek yönetilebilirlik açısından oldukça kullanışlı olacaktır.</li>
+</ul>
+<img src="/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/login_screen.png" class="">
+
+<ul>
+<li>Giriş formunu doldurarak giriş yapıyoruz ve bu işlemleri senaryomuza eklemek istediğimiz bütün sayfalar için gerçekleştiriyoruz.</li>
+</ul>
+<img src="/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/products_detail.png" class="">
+
+<ul>
+<li>Yorum yapma işleminin gerçekleştirileceği ürün seçilir.</li>
+</ul>
+<img src="/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/comments.png" class="">
+
+<ul>
+<li><p>Yorumları incelediğimizde herhangi bir yorum eklenmediği görülüyor.</p>
+</li>
+<li><p>Son olarak yorum yapma isteğinin kaydı da eklenerek, stop ile kayıt sonlandırılır.</p>
+</li>
+</ul>
+
+
+<ul>
+<li>Test senaryosu başlatılarak graph result çıktısı kontrol edildiğinde gerçekleşen işlemler görüntülenecektir.</li>
+</ul>
+<img src="/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/record_graph_results.png" class="">
+
+<ul>
+<li>Yorum sayfası kontrol edildiğinde yorum yapma isteklerinin başarılı bir şekilde gerçekleştirildiği gözükmektedir. </li>
+</ul>
+<img src="/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/comment_final.png" class="">
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#TEMEL-JMETER-KULLANIMI"><span class="toc-number">1.</span> <span class="toc-text">TEMEL JMETER KULLANIMI</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Apache-Jmeter-Nedir"><span class="toc-number">1.1.</span> <span class="toc-text">Apache Jmeter Nedir?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JMeter-ile-Web-Uygulama-Giris-Yap-Fonksiyonu-Test-Senaryosunun-Olusturulmasi"><span class="toc-number">1.2.</span> <span class="toc-text">JMeter ile Web Uygulama Giriş Yap Fonksiyonu Test Senaryosunun Oluşturulması</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JMETER-RECORDING-KULLANARAK-ISTEKLERIN-PROXY-UZERINDEN-YAKALANMASI"><span class="toc-number">1.3.</span> <span class="toc-text">JMETER RECORDING KULLANARAK İSTEKLERİN PROXY ÜZERİNDEN YAKALANMASI</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/&text=Preparation to Basic Load Test Scenerios With Jmeter [TR]"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/&title=Preparation to Basic Load Test Scenerios With Jmeter [TR]"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/&is_video=false&description=Preparation to Basic Load Test Scenerios With Jmeter [TR]"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Preparation to Basic Load Test Scenerios With Jmeter [TR]&body=Check out this article: https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/&title=Preparation to Basic Load Test Scenerios With Jmeter [TR]"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/&title=Preparation to Basic Load Test Scenerios With Jmeter [TR]"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/&title=Preparation to Basic Load Test Scenerios With Jmeter [TR]"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/&title=Preparation to Basic Load Test Scenerios With Jmeter [TR]"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://j0nliv.github.io/2021/08/14/Development-to-Basic-Load-Test-Scenerios-With-Jmeter-TR/&name=Preparation to Basic Load Test Scenerios With Jmeter [TR]&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2021 Samet Emiroğlu
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight .code pre").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      target: function(trigger) {
+        return trigger.nextElementSibling;
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Yess! Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
